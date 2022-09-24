@@ -1,0 +1,70 @@
+@keyframes showDetails {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.stationListItem {
+  padding: 1rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.stationListItemClickable {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-align: start;
+}
+
+.stationListItem:hover .stationImage {
+  opacity: .6 !important;
+}
+
+.stationImageWrapper {
+  position: relative;
+  display: inline;
+  width: fit-content;
+  height: fit-content;
+}
+
+.stationImageWrapper.isPlaying .stationImage {
+  opacity: .8;
+}
+
+.stationImage {
+  width: 9rem;
+  height: 9rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+}
+
+.playIcon {
+  display: none;
+}
+
+.stationListItem:hover .playIcon {
+  display: inline;
+}
+
+.stationDetailsWrapper {
+  display: none;
+}
+
+.stationDetailsWrapper {
+  display: none;
+}
+
+.stationDetailsWrapper.isPlaying {
+  display: block;
+  animation: showDetails 500ms ease-in-out both;
+}
+
+.stationName {
+  font-weight: 700;
+}
